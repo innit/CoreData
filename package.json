@@ -6,17 +6,44 @@
   "directories": {
     "doc": "docs"
   },
-  "scripts": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/innit/coreData.git"
+    "url": "https://github.com/innit/CoreData.git"
   },
   "author": "Rob Wormald",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/innit/coreData/issues"
+    "url": "https://github.com/innit/CoreData/issues"
   },
-  "homepage": "https://github.com/innit/coreData"
+  "homepage": "https://github.com/innit/CoreData",
+
+  "dependencies": {
+    "di": "angular/di.js#injectparent",
+    "expressionist": "angular/expressionist.js",
+    "watchtower": "angular/watchtower.js",
+    "zone.js": "angular/zone.js",
+    "traceur": "vojtajina/traceur-compiler#add-es6-pure-transformer-dist",
+    "Deferred": "https://github.com/jeffbcross/deferred/tarball/90d74b207327444a7553ce7ea42f9258dcadf2f7"
+  },
+  "devDependencies": {
+     "rtts-assert": "angular/assert",
+    "clientify": "git://github.com/vojtajina/clientify#shrinkwrap",
+    "gulp": "^3.5.6",
+    "gulp-connect": "~1.0.5",
+    "gulp-traceur": "vojtajina/gulp-traceur#traceur-as-peer",
+    "karma": "^0.12.1",
+    "karma-chrome-launcher": "^0.1.2",
+    "karma-jasmine": "^0.2.2",
+    "karma-requirejs": "^0.2.1",
+    "karma-sauce-launcher": "^0.2.3",
+    "karma-traceur-preprocessor": "vojtajina/karma-traceur-preprocessor#traceur-as-peer",
+    "pipe": "angular/pipe#remove-transitive-deps",
+    "protractor": "^0.21.0",
+    "requirejs": "^2.1.11",
+    "through2": "^0.4.1",
+    "gulp-util": "~2.2.14"
+  },
+  "scripts": {
+    "test": "karma start --single-run"
+  }
 }
