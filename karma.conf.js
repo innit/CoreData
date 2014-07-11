@@ -74,6 +74,7 @@ module.exports = function(config) {
 
 
     browsers: ['SL_Chrome'],
+    captureTimeout: 60000,
 
 
     plugins: [
