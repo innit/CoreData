@@ -1,11 +1,7 @@
 module.exports = function(config) {
 
     var customLaunchers = {
-      'Chrome_harmony': {
-        base: 'Chrome',
-        flags: ['--js-flags=--harmony']
-      },
-
+      
       // Sauce Labs browsers
       'SL_Chrome': {
         base: 'SauceLabs',
