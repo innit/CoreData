@@ -41,6 +41,28 @@ module.exports = function(config) {
       testName: 'name'
     },
 
+    customLaunchers: {
+      sl_chrome_linux: {
+        base: 'SauceLabs',
+        browserName: 'chrome',
+        platform: 'linux'
+      },
+
+      sl_ie_9: {
+        base: 'SauceLabs',
+        browserName: 'internet explorer',
+        platform: 'Windows 7',
+        version: '9'
+      },
+      
+      sl_android: {
+        base: 'SauceLabs',
+        browserName: 'android',
+        platform: 'linux',
+        version: "4.0"
+      },
+    },
+
 });
 
 
