@@ -31,7 +31,6 @@ module.exports = function(config) {
       {pattern: 'node_modules/expressionist/src/**/*.js', included: false},
       {pattern: 'node_modules/deferred/src/**/*.js', included: false},
       {pattern: 'node_modules/route-recognizer/lib/**/*.js', included: false},
-      {pattern: 'node_modules/es6-shim/es6-shim.js', included: false}
     ],
 
     reporters: ['story'],
@@ -90,7 +89,7 @@ module.exports = function(config) {
   if (process.env.TRAVIS) {
     config.sauceLabs.build = 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')';
     config.sauceLabs.tunnelIdentifier = process.env.TRAVIS_JOB_NUMBER;
-    // 
+    //
     // process.env.SAUCE_ACCESS_KEY = process.env.SAUCE_ACCESS_KEY.split('').reverse().join('');
 
     // TODO(vojta): remove once SauceLabs supports websockets.

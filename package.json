@@ -19,6 +19,7 @@
   "dependencies": {
     "Deferred": "https://github.com/jeffbcross/deferred/tarball/90d74b207327444a7553ce7ea42f9258dcadf2f7",
     "di": "angular/di.js#injectparent",
+    "es6-shim": "^0.13.0",
     "expressionist": "angular/expressionist.js",
     "karma": "^0.12.16",
     "karma-brackets": "^0.2.1",
