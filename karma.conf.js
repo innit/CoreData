@@ -1,4 +1,31 @@
 module.exports = function(config) {
+
+    var customLaunchers = {
+      'Chrome_harmony': {
+        base: 'Chrome',
+        flags: ['--js-flags=--harmony']
+      },
+
+      // Sauce Labs browsers
+      'SL_Chrome': {
+        base: 'SauceLabs',
+        browserName: 'chrome'
+      },
+      'SL_Firefox': {
+        base: 'SauceLabs',
+        browserName: 'firefox',
+        version: '26'
+      },
+      'SL_Safari': {
+        base: 'SauceLabs',
+        browserName: 'safari',
+        platform: 'OS X 10.9',
+        version: '7'
+      }
+    }
+
+
+
   config.set({
     frameworks: ['jasmine', 'traceur', 'requirejs'],
 
@@ -48,32 +75,9 @@ module.exports = function(config) {
       startConnect: true,
       testName: 'innit_core_data'
     },
-    customLaunchers: {
-      'Chrome_harmony': {
-        base: 'Chrome',
-        flags: ['--js-flags=--harmony']
-      },
+    customLaunchers: customLaunchers,
 
-      // Sauce Labs browsers
-      'SL_Chrome': {
-        base: 'SauceLabs',
-        browserName: 'chrome'
-      },
-      'SL_Firefox': {
-        base: 'SauceLabs',
-        browserName: 'firefox',
-        version: '26'
-      },
-      'SL_Safari': {
-        base: 'SauceLabs',
-        browserName: 'safari',
-        platform: 'OS X 10.9',
-        version: '7'
-      }
-    },
-
-
-    browsers: ['SL_Chrome'],
+    browsers: Object.keys(customLaunchers),
     captureTimeout: 60000,
 
 
