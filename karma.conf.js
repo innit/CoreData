@@ -33,13 +33,12 @@ module.exports = function(config) {
       'node_modules/expressionist/src/**/*.js': ['traceur'],
       'node_modules/deferred/src/**/*.js': ['traceur'],
       'node_modules/route-recognizer/lib/**/*.js': ['traceur'],
-  },
+  }
+});
 
   config.sauceLabs.testName = 'coredata';
 
   if (process.env.TRAVIS) {
     config.sauceLabs.startConnect = false;
   }
-
-  });
 };
