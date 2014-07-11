@@ -7,7 +7,7 @@ env:
   global:
     - LOGS_DIR=/tmp/coredata_build/logs
     - SAUCE_USERNAME=innitapps
-    - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
+    - SAUCE_ACCESS_KEY=83accc96-2a16-4a83-adf8-d43a98c0070c
 
 install:
   - mkdir -p $LOGS_DIR
