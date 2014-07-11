@@ -17,4 +17,4 @@ install:
 before_script:
 
 script:
-  - karma start --single-run --browsers SL_Chrome --reporters dots
+  - npm test
