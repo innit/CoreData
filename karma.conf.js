@@ -78,7 +78,7 @@ module.exports = function(config) {
     },
 
 
-    browsers: ['Chrome'],
+    browsers: ['SL_Chrome'],
 
 
     plugins: [
