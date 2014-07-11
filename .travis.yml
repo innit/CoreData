@@ -8,7 +8,7 @@ env:
     - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
     - LOGS_DIR=/tmp/coredata_build/logs
     - SAUCE_USERNAME=innitapps
-    - SAUCE_ACCESS_KEY=83accc96-2a16-4a83-adf8-d43a98c0070c
+    - SAUCE_ACCESS_KEY=ff7a06d5-2844-4d69-a244-c783894155ed
 
 install:
   - mkdir -p $LOGS_DIR
