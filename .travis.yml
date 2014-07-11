@@ -12,7 +12,6 @@ env:
 
 install:
   - mkdir -p $LOGS_DIR
-  - ./scripts/sauce_connect_setup.sh
   - npm install
   - npm install -g gulp
   - npm install -g karma-cli
