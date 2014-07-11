@@ -11,12 +11,15 @@ env:
 
 install:
   - mkdir -p $LOGS_DIR
+  - ./bin/sauce_connect_setup.sh
   - npm install
   - npm install -g gulp
   - npm install -g karma-cli
+  - ./bin/wait_for_browser_provider.sh
 
 script:
   - gulp build
+  - gulp templates
   - karma start --single-run --browsers SL_Chrome --reporters dots
 
 after_script:
