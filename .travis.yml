@@ -1,6 +1,6 @@
 language: node_js
+
 node_js:
-- '0.11'
 - '0.10'
 
 env:
@@ -17,4 +17,4 @@ install:
 before_script:
 
 script:
-  - npm test
+  - karma start --single-run --browsers SL_Chrome --reporters story
