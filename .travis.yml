@@ -15,7 +15,6 @@ install:
   - npm install
   - npm install -g gulp
   - npm install -g karma-cli
-  - ./scripts/wait_for_browser_provider.sh
 
 script:
   - karma start --single-run --browsers SL_Chrome --reporters dots
