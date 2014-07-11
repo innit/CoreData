@@ -34,34 +34,13 @@ module.exports = function(config) {
       'node_modules/deferred/src/**/*.js': ['traceur'],
       'node_modules/route-recognizer/lib/**/*.js': ['traceur'],
   },
+
   sauceLabs: {
       username: 'innitapps',
       accessKey: 'ff7a06d5-2844-4d69-a244-c783894155ed',
       startConnect: true,
       testName: 'innit_core_data'
-    },
-
-    customLaunchers: {
-      sl_chrome_linux: {
-        base: 'SauceLabs',
-        browserName: 'chrome',
-        platform: 'linux'
-      },
-
-      sl_ie_9: {
-        base: 'SauceLabs',
-        browserName: 'internet explorer',
-        platform: 'Windows 7',
-        version: '9'
-      },
-
-      sl_android: {
-        base: 'SauceLabs',
-        browserName: 'android',
-        platform: 'linux',
-        version: "4.0"
-      },
-    },
+    }
 
 });
 
