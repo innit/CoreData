@@ -5,18 +5,8 @@
 import {Provide, Inject} from 'di';
 
 export {JSCoreDataVersionNumber as version} from './CoreDataDefines';
-
-
-
-/**
- * @name JSAtomicStoreCacheNode
- *
- * @description JSAtomicStoreCacheNode is a concrete export class to represent basic nodes in a Core Data atomic store.
- * @class
- *
- */
 export {JSAtomicStoreCacheNode} from './classes/JSAtomicStoreCacheNode';
-
+export {JSManagedObject} from './classes/JSManagedObject';
 
 
 export function CoreDataProvider(){
@@ -32,7 +22,7 @@ export function CoreDataProvider(){
 
 };
 
-// 
+//
 // /**
 //  * @name JSEntityDescription
 //  *

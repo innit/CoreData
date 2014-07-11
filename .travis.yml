@@ -5,19 +5,20 @@ node_js:
 
 env:
   global:
+    - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
     - LOGS_DIR=/tmp/coredata_build/logs
     - SAUCE_USERNAME=innitapps
     - SAUCE_ACCESS_KEY=83accc96-2a16-4a83-adf8-d43a98c0070c
 
 install:
+  - mkdir -p $LOGS_DIR
+  - ./scripts/sauce_connect_setup.sh
   - npm install
   - npm install -g gulp
   - npm install -g karma-cli
-  - npm install -g jasmine-node
-
-before_script:
+  - ./scripts/wait_for_browser_provider.sh
 
 script:
-  - karma start --single-run --browsers SL_Chrome --reporters story
+  - karma start --single-run --browsers SL_Chrome --reporters dots
 
 after_script:
