@@ -33,9 +33,15 @@ module.exports = function(config) {
       'node_modules/expressionist/src/**/*.js': ['traceur'],
       'node_modules/deferred/src/**/*.js': ['traceur'],
       'node_modules/route-recognizer/lib/**/*.js': ['traceur'],
-  }
+  },
+  sauceLabs: {
+      username: 'innitapps',
+      accessKey: 'ff7a06d5-2844-4d69-a244-c783894155ed',
+      startConnect: true,
+      testName: 'name'
+    },
+
 });
 
-  config.sauceLabs.testName = 'coredata';
 
 };
