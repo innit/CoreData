@@ -37,7 +37,7 @@ module.exports = function(config) {
     }
   });
 
-  config.sauceLabs.testName = 'router';
+  config.sauceLabs.testName = 'CoreData';
 
   if (process.env.TRAVIS) {
     config.sauceLabs.startConnect = false;

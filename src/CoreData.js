@@ -4,7 +4,7 @@
  */
 import {Provide, Inject} from 'di';
 
-export {JSCoreDataVersionNumber} from './CoreDataDefines';
+export {JSCoreDataVersionNumber as version} from './CoreDataDefines';
 
 
 
@@ -32,7 +32,7 @@ export function CoreDataProvider(){
 
 };
 
-//
+// 
 // /**
 //  * @name JSEntityDescription
 //  *

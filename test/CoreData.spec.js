@@ -6,52 +6,37 @@ import {Injector} from '../node_modules/di/src/index'
 
 import {MockCoreDataProvider} from './mocks/CoreDataMocks'
 
-describe('CoreData module', function() {
-  var coreDataMod;
+describe('CoreData module', function() {   var coreDataMod;
 
-  beforeEach(function() {
-    coreDataMod = CoreData;
-  });
+  beforeEach(function() {   coreDataMod = CoreData; });
 
   it('should import the framework successfully', function() {
-      expect(coreDataMod).toBeDefined();
-  });
+  expect(coreDataMod).toBeDefined(); });
 
   it('should export a version number', function() {
-      expect(coreDataMod.JSCoreDataVersionNumber).toBeDefined();
-  });
-});
+  expect(coreDataMod.version).toBeDefined();
+ }); });
 
-describe('Core Data Headers', function() {
-  var coreDataMod;
+describe('Core Data Headers', function() {   var coreDataMod;
 
-  beforeEach(function() {
-    coreDataMod = CoreData;
-  });
+  beforeEach(function() {   coreDataMod = CoreData; });
 
   it('should import the headers successfully', function() {
-      expect(coreDataMod).toBeDefined();
-  });
-});
+  expect(coreDataMod).toBeDefined(); }); });
 
+describe('CoreDataProvider', function() {   var coreDataMod;   var injector;
 
-describe('CoreDataProvider', function() {
-  var coreDataMod;
-  var injector;
+  beforeEach(function() {   injector = new Injector([]); });
 
-  beforeEach(function() {
-    injector = new Injector([]);
-  });
-
-  it('should get the CoreDataProvider from the injector', function() {
-      var provider = injector.get(CoreData.CoreDataProvider);
+  it('should get the CoreDataProvider from the injector', function() {     var
+  provider = injector.get(CoreData.CoreDataProvider);
 
       expect(provider.foo).toBe('bar');
 
   });
 
   it('should get the same CoreDataProvider from the injector twice', function() {
-      var provider = injector.get(CoreData.CoreDataProvider);
+  var provider = injector.get(CoreData.CoreDataProvider);
 
       provider.foo = 'baz';
 
@@ -59,27 +44,17 @@ describe('CoreDataProvider', function() {
 
       expect(provider2.foo).toBe('baz');
 
-  });
-});
+  }); });
 
 describe('CoreDataProvider Mocking', function() {
 
   beforeEach(function() {
-      use(MockCoreDataProvider).as(CoreData.CoreDataProvider)
+  use(MockCoreDataProvider).as(CoreData.CoreDataProvider)
 
   });
 
   it('should get the MockCoreDataProvider from the injector', function() {
-
-      inject(CoreData.CoreDataProvider,function(provider){
-
-          expect(provider.foo).toBe('mockfoo');
-
-      })
-
-
-
-  });
-
+  inject(CoreData.CoreDataProvider,function(provider){
+  expect(provider.foo).toBe('mockfoo')         })         });
 
 });
