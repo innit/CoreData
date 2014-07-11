@@ -17,6 +17,6 @@ install:
   - npm install -g karma-cli
 
 script:
-  - karma start --single-run --browsers SL_Chrome --reporters dots
+  - karma start --single-run --reporters story
 
 after_script:
