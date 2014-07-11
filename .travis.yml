@@ -7,7 +7,7 @@ env:
   global:
     - BROWSER_PROVIDER_READY_FILE=/tmp/sauce-connect-ready
     - LOGS_DIR=/tmp/angular-router-build/logs
-    - SAUCE_USERNAME=angular-ci
+    - SAUCE_USERNAME=innitapps
     - SAUCE_ACCESS_KEY=9b988f434ff8-fbca-8aa4-4ae3-35442987
 
 install:
