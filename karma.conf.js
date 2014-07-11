@@ -38,7 +38,7 @@ module.exports = function(config) {
       username: 'innitapps',
       accessKey: 'ff7a06d5-2844-4d69-a244-c783894155ed',
       startConnect: true,
-      testName: 'name'
+      testName: 'innit_core_data'
     },
 
     customLaunchers: {
@@ -54,7 +54,7 @@ module.exports = function(config) {
         platform: 'Windows 7',
         version: '9'
       },
-      
+
       sl_android: {
         base: 'SauceLabs',
         browserName: 'android',
