@@ -8,7 +8,6 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'node_modules/traceur/bin/traceur.js',
-      'utils/loader.js',
       'test-main.js',
 
       {pattern: 'src/**/*.js', included: false},
@@ -34,12 +33,7 @@ module.exports = function(config) {
       'node_modules/expressionist/src/**/*.js': ['traceur'],
       'node_modules/deferred/src/**/*.js': ['traceur'],
       'node_modules/route-recognizer/lib/**/*.js': ['traceur'],
-    }
+  },
+
   });
-
-  config.sauceLabs.testName = 'CoreData';
-
-  if (process.env.TRAVIS) {
-    config.sauceLabs.startConnect = false;
-  }
 };
