@@ -21,6 +21,9 @@ CONNECT_LOG="$LOGS_DIR/sauce-connect"
 CONNECT_STDOUT="$LOGS_DIR/sauce-connect.stdout"
 CONNECT_STDERR="$LOGS_DIR/sauce-connect.stderr"
 
+export SAUCE_USERNAME=innitapps
+export SAUCE_ACCESS_KEY=83accc96-2a16-4a83-adf8-d43a98c0070c
+
 # Get Connect and start it
 mkdir -p $CONNECT_DIR
 cd $CONNECT_DIR
