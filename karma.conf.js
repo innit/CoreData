@@ -38,7 +38,4 @@ module.exports = function(config) {
 
   config.sauceLabs.testName = 'coredata';
 
-  if (process.env.TRAVIS) {
-    config.sauceLabs.startConnect = false;
-  }
 };
