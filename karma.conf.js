@@ -35,5 +35,11 @@ module.exports = function(config) {
       'node_modules/route-recognizer/lib/**/*.js': ['traceur'],
   },
 
+  config.sauceLabs.testName = 'coredata';
+
+  if (process.env.TRAVIS) {
+    config.sauceLabs.startConnect = false;
+  }
+
   });
 };
