@@ -10,15 +10,14 @@ env:
     - SAUCE_ACCESS_KEY=83accc96-2a16-4a83-adf8-d43a98c0070c
 
 install:
-  - mkdir -p $LOGS_DIR
-  - ./scripts/sauce_connect_setup.sh
   - npm install
   - npm install -g gulp
   - npm install -g karma-cli
-  - ./scripts/wait_for_browser_provider.sh
+  - npm install -g jasmine-node
+
+before_script:
 
 script:
-  - gulp build
-  - karma start --single-run --browsers SL_Chrome --reporters dots
+  - karma start --single-run --browsers SL_Chrome --reporters story
 
 after_script:
